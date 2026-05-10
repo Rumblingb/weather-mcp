@@ -1,0 +1,17 @@
+# Smithery deployment configuration for Weather MCP Server
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - weatherApiKey
+    properties:
+      weatherApiKey:
+        type: string
+        description: OpenWeatherMap API key
+  commandFunction: |
+    (config) => ({
+      command: "python",
+      args: ["server.py"],
+      env: { WEATHER_API_KEY: config.weatherApiKey }
+    })
