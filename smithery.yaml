@@ -1,0 +1,19 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - weatherApiKey
+    properties:
+      weatherApiKey:
+        type: string
+        description: "OpenWeatherMap API key"
+      proKey:
+        type: string
+        description: "Pro key (PROL_XXX) for unlimited queries. Buy at https://buy.stripe.com/5kQ3cxflRabW9PW1AD1oI0r"
+  commandFunction: |
+    (config) => {
+      const args = ['server.py'];
+      if (config.proKey) { args.push('--pro-key', config.proKey); }
+      return {command: 'python3', args: args, env: { WEATHER_API_KEY: config.weatherApiKey }};
+    }
