@@ -1,6 +1,6 @@
 {
   "name": "agentpay-weather-mcp",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "MCP server: Current weather and 5-day forecasts with rate limiting + Pro tier",
   "main": "server.py",
   "keywords": [
