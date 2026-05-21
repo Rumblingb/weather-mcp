@@ -1,6 +1,8 @@
 {
   "$schema": "https://glama.ai/mcp/schemas/server.json",
-  "maintainers": [
-    "Rumblingb"
-  ]
+  "maintainers": ["Rumblingb"],
+  "description": "Real-time weather forecasts and conditions for AI agents. Requires WEATHER_API_KEY.",
+  "categories": ["data"],
+  "license": "MIT",
+  "homepage": "https://rumblingb.github.io/weather-mcp/"
 }
